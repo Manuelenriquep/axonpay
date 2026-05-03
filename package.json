@@ -1,7 +1,25 @@
 {
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
     "@solana/actions": "^1.6.6",
+    "@solana/spl-token": "^0.4.5",
     "@solana/web3.js": "^1.98.4",
-    "@vercel/analytics": "^2.0.1"
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/postgres": "^0.7.2",
+    "framer-motion": "^12.38.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
   }
 }

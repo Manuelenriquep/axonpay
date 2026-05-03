@@ -2,8 +2,24 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/actions",
+      "src": "^/api/actions/?$",
       "dest": "api/actions/route.ts"
+    },
+    {
+      "src": "^/api/notifications/?$",
+      "dest": "api/notifications/index.ts"
+    },
+    {
+      "src": "^/api/rpc/?$",
+      "dest": "api/rpc/route.ts"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/actions.json",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }

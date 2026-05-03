@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "name": "Axonpay",
+  "description": "Pasarela Axonpay para Solana Actions - Guanes Legaltech",
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/actions"
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions"
+    }
+  ]
+}
