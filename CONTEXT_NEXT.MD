@@ -59,6 +59,11 @@ Axonpay es una infraestructura de liquidación transfronteriza y pagos internaci
    - Se incluye nota de compliance ("Infraestructura de Enrutamiento Tecnológico" Art. 333 C.P.).
    - Sistema robusto de reintentos (*Exponential Backoff*, hasta 5 intentos) para garantizar tolerancia a fallos del servidor local de N8N.
 
+## FASE 5: Pruebas y Certificación (En curso)
+- ✅ **Inyector de Pruebas:** Script `test-webhook.js` habilitado para simular pings locales y certificar la conexión del puente hacia N8N sin gastar saldo Devnet.
+- (Pendiente) Ejecución de transacción real vía Phantom/Solflare para validar el flujo End-to-End (E2E).
+- (Pendiente) Certificación para pase a producción (Mainnet).
+
 ## Observaciones técnicas
 1. **Sobre `process_payment`**: ✅ IMPLEMENTADO
    - Contrato es permisivo con el emisor pero estricto con destino.
