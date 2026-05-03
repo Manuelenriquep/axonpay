@@ -49,10 +49,15 @@ Axonpay es una infraestructura de liquidación transfronteriza y pagos internaci
 4. ✅ **Optimización Next.js (App Router):**
    - Rutas API movidas a `app/api/` y errores de tipado de TypeScript corregidos para garantizar un build impecable en Vercel/Netlify.
 
-## FASE 4: Siguientes pasos (Webhooks y Producción)
-1. **Infraestructura de Webhooks:**
-   - (Pendiente) Verificar despliegue de webhooks de Helius en dashboard (modo "Enhanced") para captura de eventos.
-   - Conectar los eventos recibidos con un sistema de notificaciones/asientos contables.
+## FASE 4: Auditoría y Webhooks Completada ✅
+1. ✅ **Infraestructura de Webhooks de Helius:**
+   - Endpoint `/api/notifications/route.ts` implementado para recibir eventos "Enhanced" de Helius.
+   - Procesamiento de JSON entrante con validación de transacciones exitosas.
+   - Extracción de datos con firma inmutable, timestamp y montos convertidos a USD (descontando el 0.5% del fee).
+2. ✅ **Integración Contable (N8N):**
+   - El sistema actúa como puente, reenviando el comprobante contable al webhook de N8N.
+   - Se incluye nota de compliance ("Infraestructura de Enrutamiento Tecnológico" Art. 333 C.P.).
+   - Sistema robusto de reintentos (*Exponential Backoff*, hasta 5 intentos) para garantizar tolerancia a fallos del servidor local de N8N.
 
 ## Observaciones técnicas
 1. **Sobre `process_payment`**: ✅ IMPLEMENTADO
